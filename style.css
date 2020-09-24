@@ -1,0 +1,115 @@
+html, body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin:0;
+    background-color: #222;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#value {
+    text-align: center;
+    font-size: 4em;
+    font-weight: normal;
+}
+#container {
+    width: 480px;
+    height: 162px;
+    border: 4px solid black;
+    
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    border-radius: 32px;
+    
+    overflow: hidden;
+}
+#container .box {
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
+    width: 100%;
+    height: 100%;
+}
+#container .stripe {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 32px;
+    top:-100%;
+}
+
+#container .stripe:hover {
+    box-shadow: white 0 0 8px 1px;
+    cursor: pointer;
+}
+#container .stripe.selected {
+    border: 4px dashed rgb(255, 240, 191);
+}
+
+#container #base {
+    background-color: rgb(236, 169, 69);
+}
+#container #line1 {
+    left: 64px;
+}
+#container #line2 {
+    left: 96px;
+}
+#container #line3 {
+    left: 128px;
+}
+#container #line4 {
+    left: 256px;
+}
+
+
+
+#picker {
+    display: inline-block;
+    background-color: #111;
+    margin:0 2em;
+    border: 1px solid black;
+}
+#picker .box {
+    padding: 0.5em;
+}
+#picker .box.selected {
+    background-color: rgb(0, 81, 255);
+}
+#picker .color {
+    width: 32px;
+    height: 32px;
+    border: 1px solid black;
+}
+#picker .color:hover {
+    cursor: pointer;
+}
+
+#picker .color span, #container .stripe span {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+
+
+
+body, #container .stripe, #picker .color {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+}

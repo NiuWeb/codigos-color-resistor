@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Códigos de color de resistencia</title>
+
+    <script src="app.js"></script>
+</head>
+<body>
+    <div id="picker"></div>
+    <div>
+        <div style="width: 480px; margin-bottom: 1em; text-align: center;">
+            <h3>Colores de un resistor</h3>
+            Haga click en una de las tres primeras bandas para seleccionarla y poder establecer su color con el selector de la izquierda. Haga click en una banda seleccionada para deseleccionarla.
+            
+            Haga click en la cuarta banda para cambiar su color.
+        </div>
+        <div id="container">
+            <div id="base" class="box"></div>
+            <div id="line1" class="box stripe" style="background-color: red;"></div>
+            <div id="line2" class="box stripe" style="background-color: red;"></div>
+            <div id="line3" class="box stripe" style="background-color: brown;"></div>
+            <div id="line4" class="box stripe" style="background-color: gold;"></div>
+        </div>
+        <h1 id="value">
+            <span id="ohms">220</span> &Omega;
+            &plusmn; <span id="tolerance">5</span>%
+        </h1>
+    </div>
+
+</body>
+</html>
